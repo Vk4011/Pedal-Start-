@@ -1,8 +1,8 @@
 // services/taskService.js
 
 import axios from 'axios';
+import API_URL from './Base_Url';
 
-const API_URL = 'http://localhost:5000/api/tasks'; // Update with your backend API URL
 
 const getAllTasks = async () => {
   try {

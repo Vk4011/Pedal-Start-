@@ -28,6 +28,7 @@ const TaskList = () => {
   };
 
   return (
+    
     <div className="max-w-3xl mx-auto mt-8">
       <h1 className="text-3xl font-bold mb-4">Task List</h1>
       {tasks.map((task) => (
@@ -40,11 +41,13 @@ const TaskList = () => {
             </p>
           )}
           <div className="mt-4 flex justify-between">
-            <div>
-              {/* <Link to={`/tasks/${task._id}`} className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md focus:outline-none mr-2">
-                View Details
-              </Link> */}
-
+            <div className="flex flex-row items-center justify-around gap-2">
+              <button
+                onClick={() => handleDelete(task._id)}
+                className="inline-flex items-center px-4 py-2 bg-blue-600 transition ease-in-out delay-75 hover:bg-blue-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
+              >
+                <Link to={`/tasks/${task._id}`}>View Details</Link>
+              </button>
               <button
                 onClick={() => handleDelete(task._id)}
                 className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"

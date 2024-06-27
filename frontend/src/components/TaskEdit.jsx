@@ -43,9 +43,8 @@ const TaskEdit = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Navbar />
       <main className="container mx-auto px-4 py-8">
-        <div className="max-w-md mx-auto mt-8">
+        <div className="max-w-md w-full mx-auto mt-8 p-4 bg-white rounded shadow-lg">
           <h1 className="text-3xl font-bold mb-4 text-center">Edit Task</h1>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
